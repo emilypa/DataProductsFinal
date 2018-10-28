@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Make Your Own Model App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Make Your Own Model App">
+  <meta name="author" content="Emily Payne">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Make Your Own Model App</h1>
+    <h2>Developing Data Products Coursera Final Project</h2>
+    <p>Emily Payne<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Make Your Own Model App: Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>As a student who has taken the majority (if not all) of the courses in the Data Science Specialization track, by now you have probably grown an appreciation for how nuanced and sometimes difficult it can be to build the perfect predictive model. </p>
+
+<p>Even if you&#39;ve mastered the skill of building the models themselves, chances are that your model could be even more accurate. What if you picked the wrong variables to use as predictors? What if you used the wrong algorithm? Depending on the problem, you&#39;ll probably be able to narrow down the set of choices somewhat. But it will most likely still be unclear as to which combination will yield the most optimal result.</p>
+
+<p>Wouldn&#39;t it be nice if there was some sort of app that could help automate this process? That is exactly what the &quot;Make Your Own Model&quot; app is here for! </p>
+
+<p>This app simplifies the model creation process by making it easy to include/exclude variables and change the type of algorithm being used. The app then outputs two plots and a calculation to help you assess the accuracy of the model you made. You can then easily adjust your choices and try again.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Make Your Own Model App: How To Use It</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>For the sake of simplicity, I have chosen to limit the scope of my app to just predicting the <code>mpg</code> variable in the <code>mtcars</code> dataset. Here&#39;s how it works:</p>
+
+<ol>
+<li><p>Select the type of algorithm you would like to use for prediction</p></li>
+<li><p>Check the boxes of the predictors that you would like to include. You can select as many or as few as you like- however, if none are selected then the app will request that you select at least one predictor.</p></li>
+<li><p>View the output and analyze your results. </p>
+
+<p>i) The app will output two plots: a plot of the predicted versus actual <code>mpg</code> values, and a plot of the predicted <code>mpg</code> values versus their residuals.</p>
+
+<p>ii) The app will also output the root mean squared error (RMSE) of the model. This indicates the absolute fit of the model to the data.</p></li>
+<li><p>Adjust your inputs again to see what choices yield the best results!</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Make Your Own Model App: Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Here is an example of the plots the app would output for a linear regression model that uses Number of Cylinders, Gross Horsepower, and Weight (per 1000lbs) as predictors:
+<img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+<p>And this is what the app would calculate for the root mean squared error (RMSE):</p>
+
+<pre><code>## [1] 1.665536
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Make Your Own Model App: Future Development</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This app was limited to predicting the <code>mpg</code> variable using the <code>mtcars</code> dataset, but I think it would be possible to expand upon this. </p>
+
+<p>The next iteration of the app could have the user choose which variable in the dataset they would like to be the outcome, instead of being forced to use <code>mpg</code>, and then leave the remaining variables to be used as potential predictors.</p>
+
+<p>I would also like to have this app work for any dataset that the user has chosen. However, I do think this would be much more difficult to implement because the app would have to be able to anticipate many forms of untidy data. The app would have to have some sort of standardized data preparation so that once it passes through the this process, the model will be able to use the data no matter what format the dataset was in originally. Or maybe the app would only take in datasets of a specific form- for instance, only CSV files. </p>
+
+<p>Either way, I would like to expand upon this app&#39;s capabilities in the future.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Make Your Own Model App: Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Make Your Own Model App: How To Use It'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Make Your Own Model App: Example'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Make Your Own Model App: Future Development'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
